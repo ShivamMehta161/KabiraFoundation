@@ -71,7 +71,7 @@ body{
 
         <div class="flex items-center gap-4">
 
-            <img src="logo.png"
+            <img src="logo.jpeg"
                  alt="Kabira Foundation Logo"
                  class="w-14 h-14 rounded-full border-2 border-primary object-cover">
 
@@ -81,7 +81,8 @@ body{
                 </h1>
 
                 <p class="text-primary text-sm">
-                    Since 2016
+                    Since 2019
+
                 </p>
             </div>
 
@@ -99,6 +100,10 @@ body{
 
             <a href="#projects" class="hover:text-primary fade">
                 Projects
+            </a>
+
+            <a href="#president" class="hover:text-primary fade">
+                President
             </a>
 
             <a href="#about" class="hover:text-primary fade">
@@ -124,7 +129,7 @@ body{
         <div class="max-w-3xl">
 
             <span class="bg-primary text-black px-4 py-2 rounded-full font-semibold">
-                Empowering Lives Since 2016
+                Empowering Lives Since 2019
             </span>
 
             <h1 class="text-5xl md:text-7xl font-extrabold text-white mt-6 leading-tight">
@@ -168,60 +173,6 @@ body{
             </div>
         </div>
 
-            <div class="mt-10">
-
-                <h3 class="text-2xl font-bold text-center mb-6">
-                    Project Gallery
-                </h3>
-
-                <div class="overflow-hidden">
-
-                    <div id="gallery-track" class="flex flex-row-reverse gap-6 animate-scroll will-change-transform">
-                        <!-- images injected by script -->
-                    </div>
-
-                </div>
-
-                <script>
-                    (function(){
-                        // List of image filenames found in your images/ folder (URL-encoded when used)
-                        const imgs = [
-                            'images/WhatsApp Image 2026-06-13 at 12.49.51 PM (1).jpeg',
-                            'images/WhatsApp Image 2026-06-13 at 12.49.50 PM.jpeg',
-                            'images/WhatsApp Image 2026-06-13 at 12.49.45 PM.jpeg',
-                            'images/WhatsApp Image 2026-06-13 at 12.49.45 PM (1).jpeg',
-                            'images/WhatsApp Image 2026-06-13 at 12.49.44 PM.jpeg',
-                            'images/WhatsApp Image 2026-06-13 at 12.49.40 PM.jpeg',
-                            'images/WhatsApp Image 2026-06-13 at 12.49.39 PM.jpeg',
-                            'images/WhatsApp Image 2026-06-13 at 12.49.38 PM.jpeg',
-                            'images/WhatsApp Image 2026-06-13 at 12.49.38 PM (2).jpeg',
-                            'images/WhatsApp Image 2026-06-13 at 12.49.38 PM (1).jpeg',
-                            'images/WhatsApp Image 2026-06-13 at 12.49.37 PM.jpeg',
-                            'images/WhatsApp Image 2026-06-13 at 12.49.33 PM.jpeg'
-                        ];
-
-                        const track = document.getElementById('gallery-track');
-
-                        function makeCard(src){
-                            const wrap = document.createElement('div');
-                            wrap.className = 'min-w-[280px] flex-shrink-0 rounded-2xl overflow-hidden shadow-lg';
-                            const img = document.createElement('img');
-                            img.src = encodeURI(src);
-                            img.alt = src.split('/').pop();
-                            img.className = 'w-full h-56 object-cover';
-                            wrap.appendChild(img);
-                            return wrap;
-                        }
-
-                        // append images twice for seamless loop
-                        imgs.forEach(s => track.appendChild(makeCard(s)));
-                        imgs.forEach(s => track.appendChild(makeCard(s)));
-
-                    })();
-                </script>
-
-            </div>
-
     </div>
 
 </section>
@@ -248,7 +199,7 @@ body{
 
             <div class="bg-white rounded-3xl shadow-xl p-10 text-center">
 
-                <h3 class="text-6xl font-bold text-primary">
+                <h3 class="text-6xl font-bold text-primary js-counter" data-target="200" data-suffix="+">
                     200+
                 </h3>
 
@@ -260,7 +211,7 @@ body{
 
             <div class="bg-black text-white rounded-3xl shadow-xl p-10 text-center">
 
-                <h3 class="text-6xl font-bold text-primary">
+                <h3 class="text-6xl font-bold text-primary js-counter" data-target="31" data-suffix="+">
                     31+
                 </h3>
 
@@ -272,7 +223,7 @@ body{
 
             <div class="bg-white rounded-3xl shadow-xl p-10 text-center">
 
-                <h3 class="text-6xl font-bold text-primary">
+                <h3 class="text-6xl font-bold text-primary js-counter" data-target="3100" data-suffix="+">
                     3100+
                 </h3>
 
@@ -284,7 +235,7 @@ body{
 
             <div class="bg-white rounded-3xl shadow-xl p-10 text-center">
 
-                <h3 class="text-6xl font-bold text-primary">
+                <h3 class="text-6xl font-bold text-primary js-counter" data-target="1000" data-suffix="+">
                     1000+
                 </h3>
 
@@ -296,7 +247,7 @@ body{
 
             <div class="bg-black text-white rounded-3xl shadow-xl p-10 text-center">
 
-                <h3 class="text-6xl font-bold text-primary">
+                <h3 class="text-6xl font-bold text-primary js-counter" data-target="1200" data-suffix="+">
                     1200+
                 </h3>
 
@@ -308,8 +259,8 @@ body{
 
             <div class="bg-white rounded-3xl shadow-xl p-10 text-center">
 
-                <h3 class="text-6xl font-bold text-primary">
-                    5000+  
+                <h3 class="text-6xl font-bold text-primary js-counter" data-target="5000" data-suffix="+">
+                    5000+
                 </h3>
 
                 <p class="mt-4 text-xl font-semibold">
@@ -342,9 +293,100 @@ body{
 
         </div>
 
+        <div class="mt-12">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl bg-black flex justify-center">
+                <img
+                    id="projects-slideshow-image"
+                    class="w-auto max-w-full h-auto max-h-[70vh] object-contain transition-opacity duration-700 opacity-0"
+                    alt="Project photo slideshow"
+                >
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent pointer-events-none"></div>
+            </div>
+        </div>
+
+        <script>
+            (function(){
+                const imgs = [
+                    'images/WhatsApp Image 2026-06-13 at 12.49.21 PM.jpeg',
+                    'images/WhatsApp Image 2026-06-13 at 12.49.22 PM (1).jpeg',
+                    'images/WhatsApp Image 2026-06-13 at 12.49.22 PM (2).jpeg',
+                    'images/WhatsApp Image 2026-06-13 at 12.49.22 PM.jpeg',
+                    'images/WhatsApp Image 2026-06-13 at 12.49.23 PM.jpeg',
+                    'images/WhatsApp Image 2026-06-13 at 12.49.24 PM.jpeg',
+                    'images/WhatsApp Image 2026-06-13 at 12.49.25 PM (1).jpeg',
+                    'images/WhatsApp Image 2026-06-13 at 12.49.25 PM (2).jpeg',
+                    'images/WhatsApp Image 2026-06-13 at 12.49.25 PM.jpeg',
+                    'images/WhatsApp Image 2026-06-13 at 12.49.30 PM (1).jpeg',
+                    'images/WhatsApp Image 2026-06-13 at 12.49.30 PM.jpeg',
+                    'images/WhatsApp Image 2026-06-13 at 12.49.32 PM.jpeg',
+                    'images/WhatsApp Image 2026-06-13 at 12.49.38 PM (1).jpeg',
+                    'images/WhatsApp Image 2026-06-13 at 12.49.38 PM (2).jpeg',
+                    'images/WhatsApp Image 2026-06-13 at 12.49.39 PM.jpeg',
+                    'images/WhatsApp Image 2026-06-13 at 12.49.40 PM.jpeg',
+                    'images/WhatsApp Image 2026-06-13 at 12.49.44 PM.jpeg',
+                    'images/WhatsApp Image 2026-06-13 at 12.49.50 PM.jpeg',
+                    'images/WhatsApp Image 2026-06-13 at 12.49.51 PM (2).jpeg',
+                    'images/WhatsApp Image 2026-06-13 at 12.49.51 PM.jpeg',
+                    'images/WhatsApp Image 2026-06-13 at 12.49.58 PM (1).jpeg',
+                    'images/WhatsApp Image 2026-06-13 at 12.50.03 PM.jpeg',
+                    'images/WhatsApp Image 2026-06-13 at 12.50.04 PM (1).jpeg',
+                    'images/WhatsApp Image 2026-06-13 at 12.50.04 PM (2).jpeg',
+                    'images/WhatsApp Image 2026-06-13 at 12.50.04 PM.jpeg',
+                    'images/WhatsApp Image 2026-06-13 at 12.50.05 PM (1).jpeg',
+                    'images/WhatsApp Image 2026-06-13 at 12.50.05 PM (2).jpeg',
+                    'images/WhatsApp Image 2026-06-13 at 12.50.05 PM (3).jpeg',
+                    'images/WhatsApp Image 2026-06-13 at 12.50.05 PM.jpeg',
+                    'images/WhatsApp Image 2026-06-13 at 12.50.06 PM (1).jpeg',
+                    'images/WhatsApp Image 2026-06-13 at 12.50.06 PM (2).jpeg',
+                    'images/WhatsApp Image 2026-06-13 at 12.50.06 PM.jpeg',
+                    'images/WhatsApp Image 2026-06-13 at 12.50.07 PM (1).jpeg',
+                    'images/WhatsApp Image 2026-06-13 at 12.50.07 PM.jpeg',
+                    'images/WhatsApp Image 2026-06-13 at 12.50.08 PM (1).jpeg',
+                    'images/WhatsApp Image 2026-06-13 at 12.50.08 PM (2).jpeg',
+                    'images/WhatsApp Image 2026-06-13 at 12.50.08 PM.jpeg',
+                    'images/WhatsApp Image 2026-06-13 at 12.50.09 PM (1).jpeg',
+                    'images/WhatsApp Image 2026-06-13 at 12.50.09 PM (2).jpeg',
+                    'images/WhatsApp Image 2026-06-13 at 12.50.09 PM.jpeg'
+                ];
+
+                const imgEl = document.getElementById('projects-slideshow-image');
+                if (!imgEl || imgs.length === 0) return;
+
+                let i = 0;
+
+                function setOpacity(isVisible){
+                    imgEl.classList.toggle('opacity-0', !isVisible);
+                    imgEl.classList.toggle('opacity-100', isVisible);
+                }
+
+                function show(idx){
+                    setOpacity(false);
+
+                    window.setTimeout(function(){
+                        const src = encodeURI(imgs[idx]);
+                        imgEl.src = src;
+                        imgEl.alt = imgs[idx].split('/').pop() || 'Project photo';
+
+                        if (imgEl.complete) {
+                            setOpacity(true);
+                        } else {
+                            imgEl.onload = function(){ setOpacity(true); };
+                        }
+                    }, 250);
+                }
+
+                show(i);
+
+                window.setInterval(function(){
+                    i = (i + 1) % imgs.length;
+                    show(i);
+                }, 2500);
+            })();
+        </script>
+
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
 
-            <div class="project-card bg-white shadow-xl rounded-3xl p-8 transition">
+            <div class="project-card bg-white shadow-xl rounded-3xl p-8 transition flex flex-col">
 
                 <h3 class="text-2xl font-bold text-primary">
                     Project Umeed
@@ -356,9 +398,18 @@ body{
                     their dreams.
                 </p>
 
+                <a
+                    class="mt-6 inline-flex w-fit items-center justify-center rounded-xl bg-primary px-5 py-3 font-bold text-black hover:scale-105 transition"
+                    href="https://forms.gle/W7y1oYd2heCKtURD6"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Apply Now
+                </a>
+
             </div>
 
-            <div class="project-card bg-white shadow-xl rounded-3xl p-8 transition">
+            <div class="project-card bg-white shadow-xl rounded-3xl p-8 transition flex flex-col">
 
                 <h3 class="text-2xl font-bold text-primary">
                     Project Kanyadaan
@@ -370,9 +421,18 @@ body{
                     for their daughters.
                 </p>
 
+                <a
+                    class="mt-6 inline-flex w-fit items-center justify-center rounded-xl bg-primary px-5 py-3 font-bold text-black hover:scale-105 transition"
+                    href="https://forms.gle/pzqnAjgZB2C2LV1XA"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Apply Now
+                </a>
+
             </div>
 
-            <div class="project-card bg-white shadow-xl rounded-3xl p-8 transition">
+            <div class="project-card bg-white shadow-xl rounded-3xl p-8 transition flex flex-col">
 
                 <h3 class="text-2xl font-bold text-primary">
                     Project Dana Pani
@@ -383,9 +443,18 @@ body{
                     to families facing hardships.
                 </p>
 
+                <a
+                    class="mt-6 inline-flex w-fit items-center justify-center rounded-xl bg-primary px-5 py-3 font-bold text-black hover:scale-105 transition"
+                    href="https://forms.gle/REPLACE_WITH_YOUR_GOOGLE_FORM"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Apply Now
+                </a>
+
             </div>
 
-            <div class="project-card bg-white shadow-xl rounded-3xl p-8 transition">
+            <div class="project-card bg-white shadow-xl rounded-3xl p-8 transition flex flex-col">
 
                 <h3 class="text-2xl font-bold text-primary">
                     Project Jindagiyan
@@ -396,9 +465,18 @@ body{
                     for underserved communities.
                 </p>
 
+                <a
+                    class="mt-6 inline-flex w-fit items-center justify-center rounded-xl bg-primary px-5 py-3 font-bold text-black hover:scale-105 transition"
+                    href="https://forms.gle/REPLACE_WITH_YOUR_GOOGLE_FORM"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Apply Now
+                </a>
+
             </div>
 
-            <div class="project-card bg-white shadow-xl rounded-3xl p-8 transition">
+            <div class="project-card bg-white shadow-xl rounded-3xl p-8 transition flex flex-col">
 
                 <h3 class="text-2xl font-bold text-primary">
                     Project Vidya ka Langar
@@ -407,6 +485,73 @@ body{
                 <p class="mt-4 text-gray-600">
                     Skill development and support initiatives
                     aimed at making women financially independent.
+                </p>
+
+                <a
+                    class="mt-6 inline-flex w-fit items-center justify-center rounded-xl bg-primary px-5 py-3 font-bold text-black hover:scale-105 transition"
+                    href="https://forms.gle/REPLACE_WITH_YOUR_GOOGLE_FORM"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Apply Now
+                </a>
+
+            </div>
+
+            <div class="project-card bg-white shadow-xl rounded-3xl p-8 transition flex flex-col">
+
+                <h3 class="text-2xl font-bold text-primary">
+                    Winter Project
+                </h3>
+
+                <p class="mt-4 text-gray-600">
+                    Serving needy ones with gloves and sweaters
+                    for cold winters.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PRESIDENT -->
+<section id="president" class="py-24 bg-orange-50">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+        <div class="text-center">
+
+            <h2 class="text-4xl font-bold">
+                President
+            </h2>
+
+            <p class="mt-4 text-gray-600">
+                Kabira Foundation
+            </p>
+
+        </div>
+
+        <div class="mt-16 flex justify-center">
+
+            <div class="bg-white rounded-3xl shadow-xl p-10 text-center w-full max-w-lg">
+
+                <img
+                    src="images/president.jpeg"
+                    onerror="this.onerror=null;this.src='logo.jpeg';"
+                    alt="President of Kabira Foundation"
+                    class="w-44 h-44 rounded-full object-cover mx-auto border-4 border-primary shadow-xl"
+                >
+
+                <h3 class="mt-8 text-2xl font-bold text-black">
+                    President
+                </h3>
+
+                <p class="mt-2 text-gray-600">
+                    Kabira Foundation
                 </p>
 
             </div>
@@ -436,7 +581,7 @@ body{
                 <p class="mt-8 text-gray-300 leading-relaxed text-lg">
 
                     Kabira Foundation is committed to serving society
-                    through compassion and action. Since 2016, we have
+                    through compassion and action. Since 2019, we have
                     focused on education, hunger relief, women empowerment,
                     and community welfare.
 
@@ -489,9 +634,101 @@ body{
 
         </p>
 
+        <h3 class="mt-10 text-2xl font-bold text-black">
+            Connect With Us
+        </h3>
+
+        <p class="mt-2 text-black/80">
+            Follow Kabira Foundation on social media.
+        </p>
+
+        <div class="mt-6 grid gap-6 md:grid-cols-[1fr_320px] md:items-start">
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-1 gap-4">
+
+                <a
+                    href="https://www.facebook.com/share/17mMa8bCqo/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="w-full bg-black text-white px-6 py-4 rounded-xl font-bold hover:scale-105 transition inline-flex items-center justify-center gap-3"
+                    aria-label="Kabira Foundation Facebook"
+                >
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v3H7v3h3v6h3v-6h3l1-3h-4v-3c0-.6.4-1 1-1Z" fill="currentColor"/>
+                    </svg>
+                    Facebook
+                </a>
+
+                <a
+                    href="https://www.instagram.com/kabirafoundation_?igsh=MXRobnRxc3VzYzNsdQ=="
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="w-full bg-black text-white px-6 py-4 rounded-xl font-bold hover:scale-105 transition inline-flex items-center justify-center gap-3"
+                    aria-label="Kabira Foundation Instagram"
+                >
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z" stroke="currentColor" stroke-width="2"/>
+                        <path d="M17.5 6.5h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                    Instagram
+                </a>
+
+                <a
+                    href="https://youtube.com/@kabirafoundationregd8644?si=ozbMZ6tJlATgfolZ"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="w-full bg-black text-white px-6 py-4 rounded-xl font-bold hover:scale-105 transition inline-flex items-center justify-center gap-3"
+                    aria-label="Kabira Foundation YouTube"
+                >
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.8 4.6 12 4.6 12 4.6s-5.8 0-7.5.5A3 3 0 0 0 2.4 7.2 31 31 0 0 0 2 12a31 31 0 0 0 .4 4.8 3 3 0 0 0 2.1 2.1c1.7.5 7.5.5 7.5.5s5.8 0 7.5-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 22 12a31 31 0 0 0-.4-4.8Z" stroke="currentColor" stroke-width="2"/>
+                        <path d="M10 15.5v-7l6 3.5-6 3.5Z" fill="currentColor"/>
+                    </svg>
+                    YouTube
+                </a>
+
+            </div>
+
+            <div class="rounded-3xl bg-white shadow-xl border border-black/10 p-6 text-left">
+                <h4 class="text-xl font-extrabold text-black">
+                    Scan to donate
+                </h4>
+
+                <p class="mt-2 text-sm text-gray-600">
+                    Use any UPI app to scan the QR code.
+                </p>
+
+                <div class="mt-4 rounded-2xl bg-gray-50 p-4">
+                    <img
+                        src="images\qr1.jpg"
+                        onerror="this.onerror=null;this.src='logo.jpeg';"
+                        alt="Kabira Foundation donation QR code"
+                        class="w-full h-auto rounded-2xl object-contain"
+                    >
+                </div>
+
+                <button
+                    data-open-donate="true"
+                    type="button"
+                    class="mt-4 w-full rounded-xl bg-black px-4 py-3 font-bold text-white hover:scale-105 transition"
+                >
+                    Open Large QR
+                </button>
+            </div>
+
+        </div>
+
         <div class="mt-10 flex flex-wrap justify-center gap-4">
 
-            <button class="bg-black text-white px-8 py-4 rounded-xl font-bold">
+            <button
+                id="donate-btn"
+                data-open-donate="true"
+                type="button"
+                class="bg-black text-white px-8 py-4 rounded-xl font-bold hover:scale-105 transition"
+                aria-haspopup="dialog"
+                aria-controls="donate-modal"
+            >
 
                 Donate Now
 
@@ -509,6 +746,52 @@ body{
 
 </section>
 
+<!-- DONATE MODAL -->
+<div
+    id="donate-modal"
+    class="fixed inset-0 z-[60] hidden items-center justify-center p-6 bg-black/70"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="donate-title"
+>
+    <div class="w-full max-w-md rounded-3xl bg-white shadow-2xl overflow-hidden">
+        <div class="flex items-start justify-between gap-4 p-6">
+            <div>
+                <h3 id="donate-title" class="text-2xl font-extrabold text-black">
+                    Scan to Donate
+                </h3>
+                <p class="mt-1 text-gray-600">
+                    Use any UPI app to scan the QR code.
+                </p>
+            </div>
+
+            <button
+                id="donate-close"
+                type="button"
+                class="shrink-0 rounded-xl border border-gray-200 px-3 py-2 font-bold text-black hover:bg-gray-50 transition"
+                aria-label="Close donate QR"
+            >
+                ✕
+            </button>
+        </div>
+
+        <div class="px-6 pb-6">
+            <div class="rounded-2xl bg-gray-50 p-4">
+                <img
+                    src="images/qr1.jpg"
+                    onerror="this.onerror=null;this.src='logo.jpeg';"
+                    alt="Kabira Foundation donation QR code"
+                    class="w-full h-auto rounded-2xl object-contain"
+                >
+            </div>
+
+            <p class="mt-4 text-sm text-gray-600">
+                If the QR image is not showing, add it as
+                <span class="font-semibold">images/donate-qr.jpeg</span>.
+            </p>
+        </div>
+    </div>
+</div>
 
 <!-- FOOTER -->
 <footer class="bg-black text-gray-400 py-8">
@@ -524,12 +807,141 @@ body{
         </p>
 
         <p class="mt-2">
-            Serving Humanity With Compassion Since 2016.
+            Serving Humanity With Compassion Since 2019.
         </p>
 
     </div>
 
 </footer>
+
+<script>
+    (function(){
+        // Donate QR modal
+        const donateBtn = document.getElementById('donate-btn');
+        const donateModal = document.getElementById('donate-modal');
+        const donateClose = document.getElementById('donate-close');
+        const donateTriggers = Array.from(document.querySelectorAll('[data-open-donate="true"]'));
+        let lastDonateTrigger = null;
+
+        function openDonate(){
+            if (!donateModal) return;
+            lastDonateTrigger = (document.activeElement instanceof HTMLElement) ? document.activeElement : null;
+            donateModal.classList.remove('hidden');
+            donateModal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+            if (donateClose) donateClose.focus();
+        }
+
+        function closeDonate(){
+            if (!donateModal) return;
+            donateModal.classList.add('hidden');
+            donateModal.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+            if (lastDonateTrigger) lastDonateTrigger.focus();
+            else if (donateBtn) donateBtn.focus();
+        }
+
+        donateTriggers.forEach(el => el.addEventListener('click', openDonate));
+        if (donateClose) donateClose.addEventListener('click', closeDonate);
+        if (donateModal) donateModal.addEventListener('click', (e) => {
+            if (e.target === donateModal) closeDonate();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeDonate();
+        });
+
+        const counters = Array.from(document.querySelectorAll('.js-counter'));
+        const navLinks = Array.from(document.querySelectorAll('nav a[href^="#"]'));
+
+        const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const fmt = new Intl.NumberFormat();
+
+        // Counter animation (Our Impact)
+        if (counters.length > 0) {
+            function setFinal(el){
+                const target = Number(el.dataset.target || 0);
+                const suffix = (el.dataset.suffix || '').toString();
+                el.textContent = fmt.format(target) + suffix;
+            }
+
+            // Initialize to 0 (avoids jumping down when animation starts)
+            for (const el of counters) {
+                const suffix = (el.dataset.suffix || '').toString();
+                el.textContent = '0' + suffix;
+            }
+
+            function animate(el){
+                if (el.dataset.animated === 'true') return;
+                el.dataset.animated = 'true';
+
+                if (prefersReducedMotion) {
+                    setFinal(el);
+                    return;
+                }
+
+                const target = Number(el.dataset.target || 0);
+                const suffix = (el.dataset.suffix || '').toString();
+
+                const durationMs = 1200;
+                const start = performance.now();
+
+                function easeOutCubic(t){ return 1 - Math.pow(1 - t, 3); }
+
+                function step(now){
+                    const t = Math.min(1, (now - start) / durationMs);
+                    const eased = easeOutCubic(t);
+                    const value = Math.round(target * eased);
+                    el.textContent = fmt.format(value) + suffix;
+                    if (t < 1) requestAnimationFrame(step);
+                }
+
+                requestAnimationFrame(step);
+            }
+
+            if ('IntersectionObserver' in window) {
+                const io = new IntersectionObserver((entries) => {
+                    for (const entry of entries) {
+                        if (!entry.isIntersecting) continue;
+                        animate(entry.target);
+                        io.unobserve(entry.target);
+                    }
+                }, { threshold: 0.35 });
+
+                counters.forEach(el => io.observe(el));
+            } else {
+                counters.forEach(animate);
+            }
+        }
+
+        // Scroll-spy (highlight nav link for current section)
+        if (('IntersectionObserver' in window) && navLinks.length > 0) {
+            const linkById = new Map();
+            for (const a of navLinks) {
+                const id = (a.getAttribute('href') || '').slice(1);
+                if (id) linkById.set(id, a);
+            }
+
+            const sections = Array.from(document.querySelectorAll('section[id]'));
+            if (sections.length > 0) {
+                function setActive(id){
+                    for (const a of navLinks) a.classList.remove('text-primary');
+                    const active = linkById.get(id);
+                    if (active) active.classList.add('text-primary');
+                }
+
+                const spy = new IntersectionObserver((entries) => {
+                    // pick the most visible intersecting section
+                    const visible = entries
+                        .filter(e => e.isIntersecting)
+                        .sort((a, b) => (b.intersectionRatio - a.intersectionRatio))[0];
+                    if (visible && visible.target && visible.target.id) setActive(visible.target.id);
+                }, { threshold: [0.35, 0.55, 0.75] });
+
+                sections.forEach(s => spy.observe(s));
+            }
+        }
+    })();
+</script>
 
 </body>
 </html>
