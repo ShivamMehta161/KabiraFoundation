@@ -7,6 +7,8 @@
 
 <script src="https://cdn.tailwindcss.com"></script>
 
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&display=swap" rel="stylesheet">
+
 <script>
 tailwind.config = {
     theme: {
@@ -58,6 +60,18 @@ body{
 .animate-scroll:hover{
     animation-play-state: paused;
 }
+
+.honours-title{
+    font-family: "Cinzel", serif;
+    letter-spacing: 0.03em;
+}
+
+.honours-gradient{
+    background: linear-gradient(90deg, #111111 0%, #F5821F 45%, #111111 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
 </style>
 
 </head>
@@ -80,10 +94,15 @@ body{
                     Kabira Foundation
                 </h1>
 
-                <p class="text-primary text-sm">
-                    Since 2019
+                <div class="flex items-center justify-between gap-3 text-primary text-sm">
+                    <span>
+                        Since 2019
+                    </span>
 
-                </p>
+                    <span class="text-primary/90 font-semibold">
+                        Regd. 8644
+                    </span>
+                </div>
             </div>
 
         </div>
@@ -131,10 +150,6 @@ body{
     <div class="max-w-7xl mx-auto px-6 pt-20">
 
         <div class="max-w-3xl">
-
-            <span class="bg-primary text-black px-4 py-2 rounded-full font-semibold">
-                Empowering Lives Since 2019
-            </span>
 
             <h1 class="text-5xl md:text-7xl font-extrabold text-white mt-6 leading-tight">
 
@@ -187,7 +202,7 @@ body{
 
         <div class="text-center">
 
-            <h2 class="text-4xl font-bold">
+            <h2 class="honours-title honours-gradient text-4xl md:text-5xl font-extrabold">
                 Our Impact
             </h2>
 
@@ -285,7 +300,7 @@ body{
 
         <div class="text-center">
 
-            <h2 class="text-4xl font-bold">
+            <h2 class="honours-title honours-gradient text-4xl md:text-5xl font-extrabold">
                 Our Projects
             </h2>
 
@@ -388,48 +403,98 @@ body{
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
 
-            <div class="project-card bg-white shadow-xl rounded-3xl p-8 transition flex flex-col">
+            <div class="project-card bg-white shadow-xl rounded-3xl p-8 transition flex flex-col relative overflow-hidden ring-2 ring-primary/60">
 
-                <h3 class="text-2xl font-bold text-primary">
-                    Project Umeed
-                </h3>
+                <div class="absolute -top-24 -right-24 h-44 w-44 rounded-full bg-primary/25 blur-3xl"></div>
+                <div class="absolute -bottom-24 -left-24 h-44 w-44 rounded-full bg-black/10 blur-3xl"></div>
 
-                <p class="mt-4 text-gray-600">
-                    Providing educational support and scholarships
-                    to deserving students to help them achieve
-                    their dreams.
-                </p>
+                <div class="relative">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="inline-flex items-center gap-2 rounded-full bg-primary/15 px-3 py-1 text-sm font-extrabold text-black">
+                            <span class="h-2 w-2 rounded-full bg-primary animate-pulse"></span>
+                            High demand
+                        </span>
+                        <span class="text-xs font-bold text-black/60 uppercase tracking-[0.18em]">
+                            Limited-time
+                        </span>
+                    </div>
 
-                <a
-                    class="mt-6 inline-flex w-fit items-center justify-center rounded-xl bg-primary px-5 py-3 font-bold text-black hover:scale-105 transition"
-                    href="https://forms.gle/W7y1oYd2heCKtURD6"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Apply Now
-                </a>
+                    <h3 class="mt-5 text-2xl font-bold text-primary">
+                        Project Umeed
+                    </h3>
+
+                    <p class="mt-4 text-gray-600">
+                        Providing educational support and scholarships
+                        to deserving students to help them achieve
+                        their dreams.
+                    </p>
+
+                    <div class="mt-5 rounded-2xl border border-black/10 bg-orange-50/70 px-4 py-3 text-left">
+                        <p class="text-sm font-extrabold text-black">
+                            Applications: 13 June 2026 – 1 August 2026
+                        </p>
+                        <p class="mt-1 text-xs text-gray-700">
+                            Slots are filling fast — apply early.
+                        </p>
+                    </div>
+
+                    <a
+                        class="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-primary px-5 py-3 font-extrabold text-black shadow-lg shadow-primary/30 hover:scale-[1.02] transition"
+                        href="https://forms.gle/W7y1oYd2heCKtURD6"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Apply Now
+                    </a>
+
+                </div>
 
             </div>
 
-            <div class="project-card bg-white shadow-xl rounded-3xl p-8 transition flex flex-col">
+            <div class="project-card bg-white shadow-xl rounded-3xl p-8 transition flex flex-col relative overflow-hidden ring-2 ring-primary/60">
 
-                <h3 class="text-2xl font-bold text-primary">
-                    Project Kabiliyat
-                </h3>
+                <div class="absolute -top-24 -right-24 h-44 w-44 rounded-full bg-primary/25 blur-3xl"></div>
+                <div class="absolute -bottom-24 -left-24 h-44 w-44 rounded-full bg-black/10 blur-3xl"></div>
 
-                <p class="mt-4 text-gray-600">
-                    Providing scholarship support to students with distinguished achievements
-                    in different fields, including sports and education.
-                </p>
+                <div class="relative">
+                    <div class="flex items-center justify-between gap-3">
+                        <span class="inline-flex items-center gap-2 rounded-full bg-primary/15 px-3 py-1 text-sm font-extrabold text-black">
+                            <span class="h-2 w-2 rounded-full bg-primary animate-pulse"></span>
+                            High demand
+                        </span>
+                        <span class="text-xs font-bold text-black/60 uppercase tracking-[0.18em]">
+                            Limited-time
+                        </span>
+                    </div>
 
-                <a
-                    class="mt-6 inline-flex w-fit items-center justify-center rounded-xl bg-primary px-5 py-3 font-bold text-black hover:scale-105 transition"
-                    href="https://forms.gle/9UpNvLXB2L7ekdoY7"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Apply Now
-                </a>
+                    <h3 class="mt-5 text-2xl font-bold text-primary">
+                        Project Kabiliyat
+                    </h3>
+
+                    <p class="mt-4 text-gray-600">
+                        Providing scholarship support to students with distinguished achievements
+                        in different fields, including sports and education.
+                    </p>
+
+                    <div class="mt-5 rounded-2xl border border-black/10 bg-orange-50/70 px-4 py-3 text-left">
+                        <p class="text-sm font-extrabold text-black">
+                            Applications: 13 June 2026 – 1 August 2026
+                        </p>
+                        <p class="mt-1 text-xs text-gray-700">
+                            Limited slots — apply as soon as possible.
+                        </p>
+                    </div>
+
+                    <a
+                        class="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-primary px-5 py-3 font-extrabold text-black shadow-lg shadow-primary/30 hover:scale-[1.02] transition"
+                        href="https://forms.gle/9UpNvLXB2L7ekdoY7"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Apply Now
+                    </a>
+
+                </div>
 
             </div>
 
@@ -555,6 +620,165 @@ body{
 </section>
 
 
+<!-- SOCIAL HONOURS & ACHIEVEMENTS -->
+<section class="py-24 bg-gradient-to-b from-white via-orange-50 to-white">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+        <div class="text-center">
+            <p class="text-xs md:text-sm uppercase tracking-[0.35em] text-black/60">
+                Success Stories
+            </p>
+
+            <h2 class="mt-4 honours-title honours-gradient text-4xl md:text-6xl font-extrabold">
+                Social Honours &amp; Achievements
+            </h2>
+
+            <div class="mt-6 flex items-center justify-center gap-3">
+                <span class="h-1 w-24 rounded-full bg-black/80"></span>
+                <span class="h-1 w-14 rounded-full bg-primary"></span>
+            </div>
+        </div>
+
+        <div class="mt-14">
+            <div id="success-slideshow" class="relative rounded-3xl overflow-hidden shadow-2xl bg-black border border-black/10">
+                <img
+                    id="success-slideshow-image"
+                    class="w-full h-auto max-h-[75vh] object-contain transition-opacity duration-700 opacity-0"
+                    alt="Social honours and achievements slideshow"
+                >
+
+                <div class="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-black/70 via-black/20 to-transparent">
+                    <div class="flex items-end justify-end gap-4 text-white">
+                        <div class="text-sm md:text-base font-bold tabular-nums">
+                            <span id="success-slideshow-count">0/0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            (function(){
+                const imgs = [
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.23 PM.jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.24 PM (1).jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.24 PM (2).jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.24 PM.jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.25 PM.jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.27 PM (1).jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.27 PM.jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.28 PM (1).jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.28 PM.jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.40 PM (1).jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.40 PM.jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.41 PM (1).jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.41 PM (2).jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.41 PM (3).jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.41 PM.jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.42 PM (1).jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.42 PM (2).jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.42 PM.jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.43 PM (1).jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.43 PM (2).jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.43 PM.jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.44 PM (1).jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.44 PM (2).jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.44 PM.jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.45 PM (1).jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.45 PM (2).jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.45 PM.jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.46 PM (1).jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.46 PM (2).jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.46 PM.jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.47 PM (1).jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.47 PM (2).jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.47 PM.jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.48 PM (1).jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.48 PM (2).jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.48 PM.jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.49 PM (1).jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.49 PM (2).jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.49 PM.jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.50 PM (1).jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.50 PM (2).jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.50 PM.jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.51 PM (1).jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.51 PM (2).jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.51 PM.jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.52 PM (1).jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.52 PM (2).jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.52 PM.jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.53 PM (1).jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.53 PM (2).jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.53 PM.jpeg',
+                    'success_stories/WhatsApp Image 2026-06-13 at 4.28.54 PM.jpeg'
+                ];
+
+                const wrap = document.getElementById('success-slideshow');
+                const imgEl = document.getElementById('success-slideshow-image');
+                const countEl = document.getElementById('success-slideshow-count');
+
+                if (!wrap || !imgEl || imgs.length === 0) return;
+
+                const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+                let i = 0;
+                let timer = null;
+                const autoplayMs = 2600;
+
+                function setOpacity(isVisible){
+                    imgEl.classList.toggle('opacity-0', !isVisible);
+                    imgEl.classList.toggle('opacity-100', isVisible);
+                }
+
+                function setMeta(){
+                    if (countEl) countEl.textContent = (i + 1) + '/' + imgs.length;
+                }
+
+                function show(idx){
+                    i = (idx + imgs.length) % imgs.length;
+                    setOpacity(false);
+
+                    window.setTimeout(function(){
+                        imgEl.src = encodeURI(imgs[i]);
+                        imgEl.alt = 'Success story photo';
+                        setMeta();
+
+                        if (imgEl.complete) {
+                            setOpacity(true);
+                        } else {
+                            imgEl.onload = function(){ setOpacity(true); };
+                        }
+                    }, 220);
+                }
+
+                function next(){ show(i + 1); }
+
+                function start(){
+                    if (prefersReducedMotion) return;
+                    stop();
+                    timer = window.setInterval(next, autoplayMs);
+                }
+
+                function stop(){
+                    if (timer) window.clearInterval(timer);
+                    timer = null;
+                }
+
+                wrap.addEventListener('mouseenter', stop);
+                wrap.addEventListener('mouseleave', start);
+
+                show(0);
+                start();
+            })();
+        </script>
+
+    </div>
+
+</section>
+
+
 <!-- INTERNSHIP CERTIFICATES -->
 <section id="internship" class="py-24 bg-white">
 
@@ -562,7 +786,7 @@ body{
 
         <div class="text-center">
 
-            <h2 class="text-4xl font-bold">
+            <h2 class="honours-title honours-gradient text-4xl md:text-5xl font-extrabold">
                 Social Internship Certificates
             </h2>
 
@@ -606,7 +830,7 @@ body{
 
         <div class="text-center">
 
-            <h2 class="text-4xl font-bold">
+            <h2 class="honours-title honours-gradient text-4xl md:text-5xl font-extrabold">
                 President
             </h2>
 
@@ -852,11 +1076,14 @@ body{
 
             </button>
 
-            <button class="bg-white text-black px-8 py-4 rounded-xl font-bold">
+            <a
+                href="#president"
+                class="bg-white text-black px-8 py-4 rounded-xl font-bold hover:scale-105 transition inline-flex items-center justify-center"
+            >
 
                 Become a Volunteer
 
-            </button>
+            </a>
 
         </div>
 
