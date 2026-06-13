@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kabira Foundation</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script>
+tailwind.config = {
+    theme: {
+        extend: {
+            colors: {
+                primary: '#F5821F',
+                dark: '#111111',
+            }
+        }
+    }
+}
+</script>
+
+<style>
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+}
+
+.hero-bg{
+    background:
+    linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75)),
+    url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c');
+    background-size:cover;
+    background-position:center;
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+}
+
+.fade{
+    transition:0.4s ease;
+}
+</style>
+
+</head>
+
+<body class="bg-white text-gray-800">
+
+<!-- NAVBAR -->
+<nav class="fixed top-0 left-0 w-full bg-black/90 backdrop-blur-md z-50 shadow-lg">
+
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+        <div class="flex items-center gap-4">
+
+            <img src="logo.png"
+                 alt="Kabira Foundation Logo"
+                 class="w-14 h-14 rounded-full border-2 border-primary object-cover">
+
+            <div>
+                <h1 class="text-white text-2xl font-bold">
+                    Kabira Foundation
+                </h1>
+
+                <p class="text-primary text-sm">
+                    Since 2016
+                </p>
+            </div>
+
+        </div>
+
+        <div class="hidden md:flex gap-8 text-white font-medium">
+
+            <a href="#home" class="hover:text-primary fade">
+                Home
+            </a>
+
+            <a href="#impact" class="hover:text-primary fade">
+                Impact
+            </a>
+
+            <a href="#projects" class="hover:text-primary fade">
+                Projects
+            </a>
+
+            <a href="#about" class="hover:text-primary fade">
+                About
+            </a>
+
+            <a href="#contact" class="hover:text-primary fade">
+                Contact
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- HERO SECTION -->
+<section id="home" class="hero-bg min-h-screen flex items-center">
+
+    <div class="max-w-7xl mx-auto px-6 pt-20">
+
+        <div class="max-w-3xl">
+
+            <span class="bg-primary text-black px-4 py-2 rounded-full font-semibold">
+                Empowering Lives Since 2016
+            </span>
+
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mt-6 leading-tight">
+
+                Together We Create
+                <span class="text-primary">
+                    Hope,
+                </span>
+
+                Dignity &
+                Opportunity.
+
+            </h1>
+
+            <p class="text-gray-300 text-xl mt-8 leading-relaxed">
+
+                Kabira Foundation works towards uplifting underprivileged
+                communities through education, women empowerment,
+                humanitarian aid, and social welfare initiatives.
+                Our mission is to ensure that every individual gets
+                an opportunity to live with dignity and hope.
+
+            </p>
+
+            <div class="mt-10 flex flex-wrap gap-4">
+
+                <a href="#projects"
+                   class="bg-primary text-black px-8 py-4 rounded-xl font-bold hover:scale-105 transition">
+
+                    Explore Projects
+
+                </a>
+
+                <a href="#contact"
+                   class="border border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-black transition">
+
+                    Volunteer With Us
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- IMPACT -->
+<section id="impact" class="py-24 bg-orange-50">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+        <div class="text-center">
+
+            <h2 class="text-4xl font-bold">
+                Our Impact
+            </h2>
+
+            <p class="mt-4 text-gray-600">
+                Every contribution transforms lives.
+            </p>
+
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 mt-16">
+
+            <div class="bg-white rounded-3xl shadow-xl p-10 text-center">
+
+                <h3 class="text-6xl font-bold text-primary">
+                    200+
+                </h3>
+
+                <p class="mt-4 text-xl font-semibold">
+                    Students Given Scholarships
+                </p>
+
+            </div>
+
+            <div class="bg-black text-white rounded-3xl shadow-xl p-10 text-center">
+
+                <h3 class="text-6xl font-bold text-primary">
+                    31+
+                </h3>
+
+                <p class="mt-4 text-xl font-semibold">
+                    Needy Daughters' Marriages Supported
+                </p>
+
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-xl p-10 text-center">
+
+                <h3 class="text-6xl font-bold text-primary">
+                    3100+
+                </h3>
+
+                <p class="mt-4 text-xl font-semibold">
+                    Ration Kits Delivered
+                </p>
+
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-xl p-10 text-center">
+
+                <h3 class="text-6xl font-bold text-primary">
+                    1000+
+                </h3>
+
+                <p class="mt-4 text-xl font-semibold">
+                    New set of Books, Bags & Uniforms Distributed
+                </p>
+
+            </div>
+
+            <div class="bg-black text-white rounded-3xl shadow-xl p-10 text-center">
+
+                <h3 class="text-6xl font-bold text-primary">
+                    1200+
+                </h3>
+
+                <p class="mt-4 text-xl font-semibold">
+                    Medicines to patients in need 
+                </p>
+
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-xl p-10 text-center">
+
+                <h3 class="text-6xl font-bold text-primary">
+                    5000+  
+                </h3>
+
+                <p class="mt-4 text-xl font-semibold">
+                    Footwear distributed to needy ones
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROJECTS -->
+<section id="projects" class="py-24 bg-white">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+        <div class="text-center">
+
+            <h2 class="text-4xl font-bold">
+                Our Projects
+            </h2>
+
+            <p class="mt-4 text-gray-600">
+                Creating meaningful change through dedicated initiatives.
+            </p>
+
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+
+            <div class="project-card bg-white shadow-xl rounded-3xl p-8 transition">
+
+                <h3 class="text-2xl font-bold text-primary">
+                    Project Umeed
+                </h3>
+
+                <p class="mt-4 text-gray-600">
+                    Providing educational support and scholarships
+                    to deserving students to help them achieve
+                    their dreams.
+                </p>
+
+            </div>
+
+            <div class="project-card bg-white shadow-xl rounded-3xl p-8 transition">
+
+                <h3 class="text-2xl font-bold text-primary">
+                    Project Kanyadaan
+                </h3>
+
+                <p class="mt-4 text-gray-600">
+                    Assisting financially challenged families
+                    in organizing dignified marriages
+                    for their daughters.
+                </p>
+
+            </div>
+
+            <div class="project-card bg-white shadow-xl rounded-3xl p-8 transition">
+
+                <h3 class="text-2xl font-bold text-primary">
+                    Project Annapurna
+                </h3>
+
+                <p class="mt-4 text-gray-600">
+                    Distribution of ration kits and food support
+                    to families facing hardships.
+                </p>
+
+            </div>
+
+            <div class="project-card bg-white shadow-xl rounded-3xl p-8 transition">
+
+                <h3 class="text-2xl font-bold text-primary">
+                    Health Awareness Camps
+                </h3>
+
+                <p class="mt-4 text-gray-600">
+                    Organizing health camps and awareness drives
+                    for underserved communities.
+                </p>
+
+            </div>
+
+            <div class="project-card bg-white shadow-xl rounded-3xl p-8 transition">
+
+                <h3 class="text-2xl font-bold text-primary">
+                    Women Empowerment
+                </h3>
+
+                <p class="mt-4 text-gray-600">
+                    Skill development and support initiatives
+                    aimed at making women financially independent.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section id="about" class="py-24 bg-black text-white">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+
+            <div>
+
+                <h2 class="text-4xl font-bold">
+
+                    About Kabira Foundation
+
+                </h2>
+
+                <p class="mt-8 text-gray-300 leading-relaxed text-lg">
+
+                    Kabira Foundation is committed to serving society
+                    through compassion and action. Since 2016, we have
+                    focused on education, hunger relief, women empowerment,
+                    and community welfare.
+
+                    We believe that collective efforts can build a future
+                    where every individual has equal opportunities and
+                    lives with dignity.
+
+                </p>
+
+            </div>
+
+            <div class="bg-primary text-black rounded-3xl p-10">
+
+                <h3 class="text-3xl font-bold">
+                    Our Mission
+                </h3>
+
+                <p class="mt-6 text-lg">
+
+                    To empower vulnerable communities through
+                    education, humanitarian assistance, and
+                    sustainable development initiatives.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+<section id="contact" class="py-24 bg-primary">
+
+    <div class="max-w-4xl mx-auto px-6 text-center">
+
+        <h2 class="text-5xl font-bold text-black">
+
+            Be The Reason Someone Smiles Today
+
+        </h2>
+
+        <p class="mt-6 text-xl text-black">
+
+            Join hands with Kabira Foundation through volunteering,
+            partnerships, or donations to create a lasting impact.
+
+        </p>
+
+        <div class="mt-10 flex flex-wrap justify-center gap-4">
+
+            <button class="bg-black text-white px-8 py-4 rounded-xl font-bold">
+
+                Donate Now
+
+            </button>
+
+            <button class="bg-white text-black px-8 py-4 rounded-xl font-bold">
+
+                Become a Volunteer
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer class="bg-black text-gray-400 py-8">
+
+    <div class="max-w-7xl mx-auto px-6 text-center">
+
+        <h3 class="text-primary text-2xl font-bold">
+            Kabira Foundation
+        </h3>
+
+        <p class="mt-4">
+            © 2026 Kabira Foundation. All Rights Reserved.
+        </p>
+
+        <p class="mt-2">
+            Serving Humanity With Compassion Since 2016.
+        </p>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
