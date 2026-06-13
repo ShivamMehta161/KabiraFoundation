@@ -44,6 +44,20 @@ body{
 .fade{
     transition:0.4s ease;
 }
+
+/* Gallery auto-scroll (right-to-left) */
+@keyframes scroll-rtl {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.animate-scroll{
+    animation: scroll-rtl 28s linear infinite;
+}
+
+.animate-scroll:hover{
+    animation-play-state: paused;
+}
 </style>
 
 </head>
@@ -152,8 +166,61 @@ body{
                 </a>
 
             </div>
-
         </div>
+
+            <div class="mt-10">
+
+                <h3 class="text-2xl font-bold text-center mb-6">
+                    Project Gallery
+                </h3>
+
+                <div class="overflow-hidden">
+
+                    <div id="gallery-track" class="flex flex-row-reverse gap-6 animate-scroll will-change-transform">
+                        <!-- images injected by script -->
+                    </div>
+
+                </div>
+
+                <script>
+                    (function(){
+                        // List of image filenames found in your images/ folder (URL-encoded when used)
+                        const imgs = [
+                            'images/WhatsApp Image 2026-06-13 at 12.49.51 PM (1).jpeg',
+                            'images/WhatsApp Image 2026-06-13 at 12.49.50 PM.jpeg',
+                            'images/WhatsApp Image 2026-06-13 at 12.49.45 PM.jpeg',
+                            'images/WhatsApp Image 2026-06-13 at 12.49.45 PM (1).jpeg',
+                            'images/WhatsApp Image 2026-06-13 at 12.49.44 PM.jpeg',
+                            'images/WhatsApp Image 2026-06-13 at 12.49.40 PM.jpeg',
+                            'images/WhatsApp Image 2026-06-13 at 12.49.39 PM.jpeg',
+                            'images/WhatsApp Image 2026-06-13 at 12.49.38 PM.jpeg',
+                            'images/WhatsApp Image 2026-06-13 at 12.49.38 PM (2).jpeg',
+                            'images/WhatsApp Image 2026-06-13 at 12.49.38 PM (1).jpeg',
+                            'images/WhatsApp Image 2026-06-13 at 12.49.37 PM.jpeg',
+                            'images/WhatsApp Image 2026-06-13 at 12.49.33 PM.jpeg'
+                        ];
+
+                        const track = document.getElementById('gallery-track');
+
+                        function makeCard(src){
+                            const wrap = document.createElement('div');
+                            wrap.className = 'min-w-[280px] flex-shrink-0 rounded-2xl overflow-hidden shadow-lg';
+                            const img = document.createElement('img');
+                            img.src = encodeURI(src);
+                            img.alt = src.split('/').pop();
+                            img.className = 'w-full h-56 object-cover';
+                            wrap.appendChild(img);
+                            return wrap;
+                        }
+
+                        // append images twice for seamless loop
+                        imgs.forEach(s => track.appendChild(makeCard(s)));
+                        imgs.forEach(s => track.appendChild(makeCard(s)));
+
+                    })();
+                </script>
+
+            </div>
 
     </div>
 
@@ -308,7 +375,7 @@ body{
             <div class="project-card bg-white shadow-xl rounded-3xl p-8 transition">
 
                 <h3 class="text-2xl font-bold text-primary">
-                    Project Annapurna
+                    Project Dana Pani
                 </h3>
 
                 <p class="mt-4 text-gray-600">
@@ -321,7 +388,7 @@ body{
             <div class="project-card bg-white shadow-xl rounded-3xl p-8 transition">
 
                 <h3 class="text-2xl font-bold text-primary">
-                    Health Awareness Camps
+                    Project Jindagiyan
                 </h3>
 
                 <p class="mt-4 text-gray-600">
@@ -334,7 +401,7 @@ body{
             <div class="project-card bg-white shadow-xl rounded-3xl p-8 transition">
 
                 <h3 class="text-2xl font-bold text-primary">
-                    Women Empowerment
+                    Project Vidya ka Langar
                 </h3>
 
                 <p class="mt-4 text-gray-600">
